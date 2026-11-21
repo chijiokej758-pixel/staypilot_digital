@@ -1,226 +1,306 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Modern Website with Built-in Features</title>
-  <style>
-    /* Theme Variables (Light & Dark Mode) */
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #1f2937;
-      --card-bg: #f3f4f6;
-      --primary: #2563eb;
-      --border: #e5e7eb;
-    }
-
-    body.dark-mode {
-      --bg-color: #111827;
-      --text-color: #f9fafb;
-      --card-bg: #1f2937;
-      --primary: #3b82f6;
-      --border: #374151;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: system-ui, -apple-system, sans-serif;
-    }
-
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      line-height: 1.6;
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    /* Navigation Bar */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 5%;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .theme-btn {
-      padding: 0.5rem 1rem;
-      border: 1px solid var(--border);
-      background: var(--card-bg);
-      color: var(--text-color);
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: 600;
-    }
-
-    /* Main Container */
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1.5rem;
-    }
-
-    section {
-      margin-bottom: 3rem;
-    }
-
-    h1, h2 {
-      margin-bottom: 1rem;
-    }
-
-    /* FAQ Accordion */
-    .faq-item {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      margin-bottom: 0.75rem;
-      overflow: hidden;
-    }
-
-    .faq-question {
-      width: 100%;
-      text-align: left;
-      padding: 1rem;
-      background: none;
-      border: none;
-      color: var(--text-color);
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .faq-answer {
-      padding: 0 1rem 1rem 1rem;
-      display: none;
-      opacity: 0.9;
-    }
-
-    .faq-item.active .faq-answer {
-      display: block;
-    }
-
-    /* Contact Form */
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      background: var(--card-bg);
-      padding: 1.5rem;
-      border-radius: 8px;
-      border: 1px solid var(--border);
-    }
-
-    input, textarea {
-      padding: 0.75rem;
-      border-radius: 6px;
-      border: 1px solid var(--border);
-      background: var(--bg-color);
-      color: var(--text-color);
-      font-size: 1rem;
-    }
-
-    button[type="submit"] {
-      padding: 0.75rem;
-      background: var(--primary);
-      color: #ffffff;
-      border: none;
-      border-radius: 6px;
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    /* Floating WhatsApp Button */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25d366;
-      color: white;
-      padding: 12px 18px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Grand Haven Hotel - A luxury African and international hospitality experience.">
+<title>The Grand Haven | Luxury Hospitality</title>
+<style>
+:root{--gold:#c6a36b;--dark:#142019;--cream:#f7f4ed;--muted:#777}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Georgia,serif;color:#252a25;background:var(--cream)}
+a{text-decoration:none;color:inherit}
+button,input,select{font:inherit}
+.top{background:#17241c;color:white;padding:10px 6%;display:flex;justify-content:space-between;font:12px Arial}
+header{background:#fff;display:flex;align-items:center;justify-content:space-between;padding:20px 6%;gap:15px;position:sticky;top:0;z-index:5}
+.logo{font-size:21px;font-weight:bold;letter-spacing:2px;color:#25372b}
+.logo small{display:block;font:9px Arial;letter-spacing:4px;color:var(--gold);text-align:center}
+nav{display:flex;gap:24px;font:13px Arial}
+nav a:hover{color:var(--gold)}
+.header-btn,.gold-btn{background:var(--gold);padding:13px 19px;color:#17241c;font:12px Arial;font-weight:bold;display:inline-block;border:0;cursor:pointer}
+.hero{min-height:570px;background:linear-gradient(90deg,rgba(10,20,14,.76),rgba(10,20,14,.12)),url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1800') center/cover;display:flex;align-items:center;padding:80px 9%;color:white}
+.hero-content{max-width:680px}
+.eyebrow{color:var(--gold);font:11px Arial;letter-spacing:4px;text-transform:uppercase}
+h1{font-size:clamp(43px,7vw,76px);line-height:1.1;font-weight:normal;margin:24px 0}
+.hero p{font:15px/1.9 Arial;max-width:500px;color:#eee}
+.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}
+.outline-btn{padding:13px 20px;border:1px solid white;color:white;font:12px Arial}
+.booking{background:#fff;padding:25px 7%;box-shadow:0 5px 20px #0001}
+.booking form{display:grid;grid-template-columns:repeat(4,1fr) auto;gap:15px;align-items:end}
+.field label{display:block;font:10px Arial;letter-spacing:1px;margin-bottom:8px;color:#777}
+.field input,.field select{width:100%;padding:12px;border:1px solid #ddd;background:white;font:13px Arial}
+section{padding:85px 8%}
+.center{text-align:center}
+.heading{font-size:clamp(30px,4vw,43px);font-weight:normal;margin:15px 0}
+.sub{font:14px/1.9 Arial;color:#777;max-width:650px;margin:0 auto 38px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:white}
+.card img{width:100%;height:220px;object-fit:cover;display:block}
+.card-body{padding:23px}
+.card h3{font-size:22px;font-weight:normal;margin:10px 0}
+.card p{font:13px/1.8 Arial;color:#777}
+.price{color:#9c7740;font:14px Arial;margin-top:15px}
+.price strong{font-size:20px}
+.link{display:inline-block;margin-top:18px;color:#927044;font:11px Arial;letter-spacing:1px;text-transform:uppercase}
+.about{background:#17271e;color:white;display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.about img{width:100%;height:400px;object-fit:cover}
+.about p{font:14px/2 Arial;color:#cbd1ca;margin:20px 0}
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:35px}
+.feature{padding:23px 10px;border:1px solid #e3ded2;text-align:center}
+.feature b{display:block;font-size:20px;color:#99794c;margin-bottom:10px}
+.feature span{font:12px Arial;color:#777}
+.dining{background:#f0ece3}
+.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px}
+.gallery img{width:100%;height:220px;object-fit:cover}
+.gallery img:first-child{height:452px;grid-row:span 2}
+.reservation{background:#17271e;color:white}
+.reservation .sub{color:#c4cec5}
+.reservation-box{max-width:650px;margin:auto;background:#fff;color:#222;padding:30px}
+.reservation-box input,.reservation-box select,.reservation-box textarea{width:100%;padding:13px;border:1px solid #ddd;margin:8px 0 15px;font:13px Arial}
+.reservation-box label{font:11px Arial;color:#666}
+.reservation-box .gold-btn{width:100%}
+footer{background:#101b14;color:#ddd;padding:45px 8%;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer p{font:12px/2 Arial;color:#aaa}
+.disclaimer{text-align:center;padding:12px;background:#e9e3d6;color:#655b4b;font:11px Arial}
+@media(max-width:800px){
+nav{gap:12px;font-size:11px}
+.header-btn{padding:10px}
+.booking form{grid-template-columns:1fr 1fr}
+.grid{grid-template-columns:1fr 1fr}
+.about{grid-template-columns:1fr}
+.features{grid-template-columns:1fr 1fr}
+}
+@media(max-width:520px){
+header{flex-wrap:wrap}
+nav{order:3;width:100%;justify-content:space-between}
+.hero{min-height:520px;padding:65px 7%}
+.grid{grid-template-columns:1fr}
+.gallery{grid-template-columns:1fr 1fr}
+.gallery img:first-child{height:220px;grid-row:auto}
+section{padding:65px 6%}
+.top{font-size:10px}
+}
+</style>
 </head>
 <body>
 
-  <!-- Header with Dark Mode Toggle -->
-  <header>
-    <h2>MyBrand</h2>
-    <button class="theme-btn" id="themeToggle">🌙 Dark Mode</button>
-  </header>
+<div class="top">
+<span>WELCOME TO THE GRAND HAVEN</span>
+<span>AFRICAN HOSPITALITY · WORLD-CLASS COMFORT</span>
+</div>
 
-  <main>
-    <!-- Hero Section -->
-    <section>
-      <h1>Welcome to Our Website</h1>
-      <p>This template includes built-in user conveniences like dark mode, expandable FAQs, a contact form, and instant chat.</p>
-    </section>
+<header>
+<a href="#" class="logo">THE GRAND HAVEN<small>HOTEL & RESORT</small></a>
+<nav>
+<a href="#home">Home</a>
+<a href="#rooms">Rooms</a>
+<a href="#dining">Dining</a>
+<a href="#experience">Experience</a>
+<a href="#contact">Contact</a>
+</nav>
+<a href="#contact" class="header-btn">RESERVE NOW</a>
+</header>
 
-    <!-- Interactive FAQ Section -->
-    <section>
-      <h2>Frequently Asked Questions</h2>
-      <div class="faq-item">
-        <button class="faq-question">How do I place an order? <span>+</span></button>
-        <div class="faq-answer">Simply fill out the contact form below or click the WhatsApp button to chat with us directly.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">Do you offer customer support? <span>+</span></button>
-        <div class="faq-answer">Yes! Our team responds to messages within a few hours.</div>
-      </div>
-    </section>
+<main>
+<div class="hero" id="home">
+<div class="hero-content">
+<div class="eyebrow">AN EXTRAORDINARY STAY</div>
+<h1>Discover a world of comfort and elegance.</h1>
+<p>Experience the warmth of African hospitality combined with the finest international luxury. Your unforgettable escape begins here.</p>
+<div class="actions">
+<a href="#rooms" class="gold-btn">EXPLORE OUR ROOMS</a>
+<a href="#experience" class="outline-btn">DISCOVER THE EXPERIENCE</a>
+</div>
+</div>
+</div>
 
-    <!-- Contact Form Section -->
-    <section>
-      <h2>Send Us a Message</h2>
-      <form id="contactForm">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea rows="4" placeholder="How can we help you?" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-  </main>
+<div class="booking">
+<form onsubmit="event.preventDefault();document.getElementById('contact').scrollIntoView();">
+<div class="field">
+<label>CHECK IN</label>
+<input type="date" id="checkin" required>
+</div>
+<div class="field">
+<label>CHECK OUT</label>
+<input type="date" id="checkout" required>
+</div>
+<div class="field">
+<label>GUESTS</label>
+<select id="guests"><option>1 Guest</option><option selected>2 Guests</option><option>3 Guests</option><option>4 Guests</option></select>
+</div>
+<div class="field">
+<label>ROOM TYPE</label>
+<select id="roomtype"><option>Deluxe Room</option><option>Executive Suite</option><option>Presidential Suite</option></select>
+</div>
+<button class="gold-btn">CHECK AVAILABILITY</button>
+</form>
+</div>
 
-  <!-- Floating WhatsApp Chat Link (Replace 2348000000000 with your number) -->
-  <a href="https://wa.me" class="whatsapp-float" target="_blank">
-    💬 Chat on WhatsApp
-  </a>
+<section class="center" id="rooms">
+<div class="eyebrow">ACCOMMODATION</div>
+<h2 class="heading">Rooms designed around you.</h2>
+<p class="sub">Every detail is thoughtfully considered. Discover refined interiors, exceptional comfort and a peaceful atmosphere.</p>
+<div class="grid">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800" alt="Luxury deluxe hotel room">
+<div class="card-body">
+<div class="eyebrow">CLASSIC COMFORT</div>
+<h3>Deluxe Room</h3>
+<p>Elegant accommodation with contemporary furnishings and a relaxing atmosphere.</p>
+<div class="price"><strong class="naira" data-ngn="85000" data-usd="55">₦85,000</strong> / night</div>
+<a href="#contact" class="link">ENQUIRE ABOUT THIS ROOM →</a>
+</div>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800" alt="Executive hotel suite">
+<div class="card-body">
+<div class="eyebrow">REFINED LIVING</div>
+<h3>Executive Suite</h3>
+<p>Spacious suite with a separate lounge and premium guest amenities.</p>
+<div class="price"><strong class="naira" data-ngn="160000" data-usd="105">₦160,000</strong> / night</div>
+<a href="#contact" class="link">ENQUIRE ABOUT THIS ROOM →</a>
+</div>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800" alt="Presidential luxury suite">
+<div class="card-body">
+<div class="eyebrow">ULTIMATE INDULGENCE</div>
+<h3>Presidential Suite</h3>
+<p>An exceptional private retreat with expansive interiors and luxurious details.</p>
+<div class="price"><strong class="naira" data-ngn="350000" data-usd="230">₦350,000</strong> / night</div>
+<a href="#contact" class="link">ENQUIRE ABOUT THIS ROOM →</a>
+</div>
+</div>
+</div>
+<p style="margin-top:25px;font:12px Arial;color:#888">Demonstration prices only. Availability and actual rates are not connected to a live hotel.</p>
+</section>
 
-  <script>
-    // 1. Dark Mode Toggle Logic
-    const themeToggle = document.getElementById('themeToggle');
-    themeToggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      const isDark = document.body.classList.contains('dark-mode');
-      themeToggle.textContent = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
-    });
+<section class="about" id="experience">
+<div>
+<div class="eyebrow">THE GRAND HAVEN EXPERIENCE</div>
+<h2 class="heading">Rooted in Africa. Inspired by the world.</h2>
+<p>At The Grand Haven, we celebrate the richness of African hospitality while embracing the standards of international luxury.</p>
+<p>From thoughtful service and beautiful spaces to memorable culinary experiences, every moment is designed to make you feel at home.</p>
+<a href="#contact" class="gold-btn">PLAN YOUR STAY</a>
+</div>
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1000" alt="Luxury hotel swimming pool">
+</section>
 
-    // 2. FAQ Accordion Logic
-    const faqQuestions = document.querySelectorAll('.faq-question');
-    faqQuestions.forEach(button => {
-      button.addEventListener('click', () => {
-        const item = button.parentElement;
-        item.classList.toggle('active');
-        const symbol = button.querySelector('span');
-        symbol.textContent = item.classList.contains('active') ? '−' : '+';
-      });
-    });
+<section class="center dining" id="dining">
+<div class="eyebrow">CULINARY JOURNEYS</div>
+<h2 class="heading">A taste of Africa and beyond.</h2>
+<p class="sub">Discover a dining experience that brings together the flavours of Nigeria and international cuisine.</p>
+<div class="grid">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800" alt="Elegant restaurant">
+<div class="card-body"><h3>The Haven Restaurant</h3><p>Elegant dining with Nigerian favourites and international classics.</p></div>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800" alt="Luxury dining">
+<div class="card-body"><h3>The Signature Lounge</h3><p>A welcoming setting for relaxing evenings and social moments.</p></div>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800" alt="Fine dining">
+<div class="card-body"><h3>Private Dining</h3><p>Personalised dining experiences for special celebrations.</p></div>
+</div>
+</div>
+</section>
 
-    // 3. Simple Form Submission Feedback
-    const contactForm = document.getElementById('contactForm');
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      alert('Thank you! Your message has been sent.');
-      contactForm.reset();
-    });
-  </script>
+<section class="center">
+<div class="eyebrow">BEYOND YOUR ROOM</div>
+<h2 class="heading">Make every moment memorable.</h2>
+<div class="features">
+<div class="feature"><b>◇</b><span>Infinity Pool</span></div>
+<div class="feature"><b>✧</b><span>Spa & Wellness</span></div>
+<div class="feature"><b>⌁</b><span>Fitness Centre</span></div>
+<div class="feature"><b>♧</b><span>Garden Retreat</span></div>
+</div>
+</section>
+
+<section class="center dining">
+<div class="eyebrow">A GLIMPSE OF LUXURY</div>
+<h2 class="heading">Spaces made for unforgettable moments.</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=900" alt="Resort pool">
+<img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800" alt="Hotel exterior">
+<img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800" alt="Luxury interior">
+<img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800" alt="Luxury hotel">
+<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800" alt="Hotel bedroom">
+</div>
+</section>
+
+<section class="reservation center" id="contact">
+<div class="eyebrow">YOUR JOURNEY STARTS HERE</div>
+<h2 class="heading">Let us make your stay special.</h2>
+<p class="sub">Send a reservation enquiry. Our guest services team will be happy to assist you.</p>
+<div class="reservation-box">
+<form id="bookingForm">
+<label>YOUR FULL NAME</label>
+<input id="name" placeholder="Enter your name" required>
+<label>EMAIL ADDRESS</label>
+<input id="email" type="email" placeholder="Enter your email" required>
+<label>PHONE NUMBER</label>
+<input id="phone" type="tel" placeholder="Your phone number" required>
+<label>ROOM TYPE</label>
+<select id="selectedRoom"><option>Deluxe Room</option><option>Executive Suite</option><option>Presidential Suite</option></select>
+<label>CHECK-IN DATE</label>
+<input id="arrival" type="date" required>
+<label>CHECK-OUT DATE</label>
+<input id="departure" type="date" required>
+<label>ADDITIONAL REQUESTS</label>
+<textarea id="requests" rows="3" placeholder="Tell us anything else we should know"></textarea>
+<button class="gold-btn" type="submit">SEND RESERVATION ENQUIRY →</button>
+</form>
+</div>
+<p style="font:11px Arial;color:#cbd1ca;margin-top:20px">Demonstration booking system. No actual room reservations are confirmed.</p>
+</section>
+</main>
+
+<footer>
+<div><strong>THE GRAND HAVEN</strong><p>Hotel & Resort<br>Where African hospitality meets international luxury.</p></div>
+<div><strong>EXPLORE</strong><p><a href="#rooms">Rooms & Suites</a><br><a href="#dining">Dining</a><br><a href="#experience">Experience</a></p></div>
+<div><strong>CONTACT</strong><p>Demonstration property<br>Contact details to be configured</p></div>
+</footer>
+<div class="disclaimer">FICTIONAL HOTEL WEBSITE DEMONSTRATION · CREATED BY STAYPILOT DIGITAL</div>
+
+<script>
+const wa="2349125986073";
+const checkin=document.getElementById("checkin");
+const checkout=document.getElementById("checkout");
+const arrival=document.getElementById("arrival");
+const departure=document.getElementById("departure");
+const today=new Date().toISOString().split("T")[0];
+[checkin,checkout,arrival,departure].forEach(el=>el.min=today);
+checkin.addEventListener("change",()=>checkout.min=checkin.value);
+arrival.addEventListener("change",()=>departure.min=arrival.value);
+
+document.getElementById("bookingForm").addEventListener("submit",function(e){
+e.preventDefault();
+if(departure.value<=arrival.value){
+alert("Check-out must be after check-in.");
+return;
+}
+const message=`Hello, I am interested in a reservation at The Grand Haven Hotel.
+
+Name: ${document.getElementById("name").value}
+Email: ${document.getElementById("email").value}
+Phone: ${document.getElementById("phone").value}
+Room: ${document.getElementById("selectedRoom").value}
+Check-in: ${arrival.value}
+Check-out: ${departure.value}
+Requests: ${document.getElementById("requests").value}
+
+Please provide more information.`;
+window.open("https://wa.me/"+wa+"?text="+encodeURIComponent(message),"_blank");
+});
+
+document.querySelector(".booking form").addEventListener("submit",function(){
+document.getElementById("selectedRoom").value=document.getElementById("roomtype").value;
+arrival.value=checkin.value;
+departure.value=checkout.value;
+});
+</script>
 </body>
 </html>
