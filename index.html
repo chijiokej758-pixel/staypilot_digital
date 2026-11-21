@@ -4,171 +4,303 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="StayPilot Digital builds professional hotel websites, booking systems and digital solutions for hospitality businesses.">
-<title>StayPilot Digital | Hospitality Websites</title>
+<meta name="description" content="The Grand Haven Hotel - A luxury African and international hospitality experience.">
+<title>The Grand Haven | Luxury Hospitality</title>
 <style>
+:root{--gold:#c6a36b;--dark:#142019;--cream:#f7f4ed;--muted:#777}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;background:#0b1424;color:#f5f7fb;line-height:1.6}
+html{scroll-behavior:smooth}
+body{font-family:Georgia,serif;color:#252a25;background:var(--cream)}
 a{text-decoration:none;color:inherit}
-header{padding:22px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #263348}
-.logo{font-size:22px;font-weight:800;letter-spacing:1px}
-.logo span{color:#e9a957}
-nav{display:flex;gap:22px;font-size:14px;color:#c5cedb}
-.hero{padding:95px 7% 85px;background:radial-gradient(ellipse at 85% 20%,#263e5a 0%,#0b1424 55%)}
-.tag{color:#efb76d;font-size:12px;letter-spacing:2px;font-weight:bold}
-h1{font-size:clamp(38px,7vw,66px);line-height:1.1;max-width:750px;margin:22px 0}
-h1 span{color:#efb76d}
-.hero p{color:#b9c5d5;max-width:550px;font-size:17px}
+button,input,select{font:inherit}
+.top{background:#17241c;color:white;padding:10px 6%;display:flex;justify-content:space-between;font:12px Arial}
+header{background:#fff;display:flex;align-items:center;justify-content:space-between;padding:20px 6%;gap:15px;position:sticky;top:0;z-index:5}
+.logo{font-size:21px;font-weight:bold;letter-spacing:2px;color:#25372b}
+.logo small{display:block;font:9px Arial;letter-spacing:4px;color:var(--gold);text-align:center}
+nav{display:flex;gap:24px;font:13px Arial}
+nav a:hover{color:var(--gold)}
+.header-btn,.gold-btn{background:var(--gold);padding:13px 19px;color:#17241c;font:12px Arial;font-weight:bold;display:inline-block;border:0;cursor:pointer}
+.hero{min-height:570px;background:linear-gradient(90deg,rgba(10,20,14,.76),rgba(10,20,14,.12)),url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1800') center/cover;display:flex;align-items:center;padding:80px 9%;color:white}
+.hero-content{max-width:680px}
+.eyebrow{color:var(--gold);font:11px Arial;letter-spacing:4px;text-transform:uppercase}
+h1{font-size:clamp(43px,7vw,76px);line-height:1.1;font-weight:normal;margin:24px 0}
+.hero p{font:15px/1.9 Arial;max-width:500px;color:#eee}
 .actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}
-.btn{padding:14px 23px;border-radius:6px;font-weight:bold;display:inline-block}
-.primary{background:#e9a957;color:#101827}
-.secondary{border:1px solid #64748b;color:white}
-section{padding:75px 7%}
-.section-tag{color:#e9a957;font-size:12px;letter-spacing:2px;font-weight:bold}
-h2{font-size:34px;margin:12px 0 15px}
-.intro{color:#aebacc;max-width:600px;margin-bottom:35px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-.card{background:#142237;border:1px solid #293a51;padding:25px;border-radius:12px}
-.card h3{margin:12px 0}
-.card p{color:#b1bfd0;font-size:14px}
-.symbol{font-size:27px;color:#efb76d}
-.demo{background:#111f33;border-radius:15px;overflow:hidden;border:1px solid #35465c}
-.demo-image{height:190px;background:linear-gradient(130deg,#a27c55,#253e50 55%,#101827);display:flex;align-items:center;justify-content:center;font-size:35px}
-.demo-content{padding:23px}
-.demo-content p{color:#b6c3d3;font-size:14px;margin:8px 0 17px}
-.note{font-size:12px;color:#efb76d;margin-top:12px}
-.steps{counter-reset:step}
-.step{border-left:2px solid #e9a957;padding:5px 0 20px 22px}
-.step h3{font-size:18px}
-.step p{color:#b1bfd0;font-size:14px}
-.cta{background:linear-gradient(120deg,#253b54,#142237);text-align:center;border-radius:15px;padding:50px 22px}
-.cta p{color:#c0cbd9;max-width:550px;margin:10px auto 24px}
-footer{padding:30px 7%;border-top:1px solid #293a51;color:#9eacbd;font-size:13px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
-@media(max-width:600px){
-header{padding:18px 5%;flex-wrap:wrap;gap:12px}
-nav{gap:13px;font-size:12px}
-.hero{padding:70px 6%}
-section{padding:60px 6%}
-h2{font-size:29px}
+.outline-btn{padding:13px 20px;border:1px solid white;color:white;font:12px Arial}
+.booking{background:#fff;padding:25px 7%;box-shadow:0 5px 20px #0001}
+.booking form{display:grid;grid-template-columns:repeat(4,1fr) auto;gap:15px;align-items:end}
+.field label{display:block;font:10px Arial;letter-spacing:1px;margin-bottom:8px;color:#777}
+.field input,.field select{width:100%;padding:12px;border:1px solid #ddd;background:white;font:13px Arial}
+section{padding:85px 8%}
+.center{text-align:center}
+.heading{font-size:clamp(30px,4vw,43px);font-weight:normal;margin:15px 0}
+.sub{font:14px/1.9 Arial;color:#777;max-width:650px;margin:0 auto 38px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:white}
+.card img{width:100%;height:220px;object-fit:cover;display:block}
+.card-body{padding:23px}
+.card h3{font-size:22px;font-weight:normal;margin:10px 0}
+.card p{font:13px/1.8 Arial;color:#777}
+.price{color:#9c7740;font:14px Arial;margin-top:15px}
+.price strong{font-size:20px}
+.link{display:inline-block;margin-top:18px;color:#927044;font:11px Arial;letter-spacing:1px;text-transform:uppercase}
+.about{background:#17271e;color:white;display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.about img{width:100%;height:400px;object-fit:cover}
+.about p{font:14px/2 Arial;color:#cbd1ca;margin:20px 0}
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:35px}
+.feature{padding:23px 10px;border:1px solid #e3ded2;text-align:center}
+.feature b{display:block;font-size:20px;color:#99794c;margin-bottom:10px}
+.feature span{font:12px Arial;color:#777}
+.dining{background:#f0ece3}
+.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px}
+.gallery img{width:100%;height:220px;object-fit:cover}
+.gallery img:first-child{height:452px;grid-row:span 2}
+.reservation{background:#17271e;color:white}
+.reservation .sub{color:#c4cec5}
+.reservation-box{max-width:650px;margin:auto;background:#fff;color:#222;padding:30px}
+.reservation-box input,.reservation-box select,.reservation-box textarea{width:100%;padding:13px;border:1px solid #ddd;margin:8px 0 15px;font:13px Arial}
+.reservation-box label{font:11px Arial;color:#666}
+.reservation-box .gold-btn{width:100%}
+footer{background:#101b14;color:#ddd;padding:45px 8%;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer p{font:12px/2 Arial;color:#aaa}
+.disclaimer{text-align:center;padding:12px;background:#e9e3d6;color:#655b4b;font:11px Arial}
+@media(max-width:800px){
+nav{gap:12px;font-size:11px}
+.header-btn{padding:10px}
+.booking form{grid-template-columns:1fr 1fr}
+.grid{grid-template-columns:1fr 1fr}
+.about{grid-template-columns:1fr}
+.features{grid-template-columns:1fr 1fr}
+}
+@media(max-width:520px){
+header{flex-wrap:wrap}
+nav{order:3;width:100%;justify-content:space-between}
+.hero{min-height:520px;padding:65px 7%}
+.grid{grid-template-columns:1fr}
+.gallery{grid-template-columns:1fr 1fr}
+.gallery img:first-child{height:220px;grid-row:auto}
+section{padding:65px 6%}
+.top{font-size:10px}
 }
 </style>
 </head>
 <body>
 
+<div class="top">
+<span>WELCOME TO THE GRAND HAVEN</span>
+<span>AFRICAN HOSPITALITY · WORLD-CLASS COMFORT</span>
+</div>
+
 <header>
-<a class="logo" href="#">STAYPILOT<span>.</span></a>
+<a href="#" class="logo">THE GRAND HAVEN<small>HOTEL & RESORT</small></a>
 <nav>
-<a href="#services">Services</a>
-<a href="#work">Our work</a>
+<a href="#home">Home</a>
+<a href="#rooms">Rooms</a>
+<a href="#dining">Dining</a>
+<a href="#experience">Experience</a>
 <a href="#contact">Contact</a>
 </nav>
+<a href="#contact" class="header-btn">RESERVE NOW</a>
 </header>
 
 <main>
-<div class="hero">
-<div class="tag">DIGITAL SOLUTIONS FOR HOSPITALITY</div>
-<h1>More bookings.<br><span>Better guest experiences.</span></h1>
-<p>We build elegant, high-performing websites and digital solutions that help hotels and hospitality businesses attract guests and grow.</p>
+<div class="hero" id="home">
+<div class="hero-content">
+<div class="eyebrow">AN EXTRAORDINARY STAY</div>
+<h1>Discover a world of comfort and elegance.</h1>
+<p>Experience the warmth of African hospitality combined with the finest international luxury. Your unforgettable escape begins here.</p>
 <div class="actions">
-<a class="btn primary" href="#contact">Start a project →</a>
-<a class="btn secondary" href="#work">Explore our work</a>
+<a href="#rooms" class="gold-btn">EXPLORE OUR ROOMS</a>
+<a href="#experience" class="outline-btn">DISCOVER THE EXPERIENCE</a>
+</div>
 </div>
 </div>
 
-<section id="services">
-<div class="section-tag">WHAT WE DO</div>
-<h2>Digital solutions built for hotels.</h2>
-<p class="intro">Everything your hospitality business needs to create a stronger online presence and make guest enquiries easier.</p>
+<div class="booking">
+<form onsubmit="event.preventDefault();document.getElementById('contact').scrollIntoView();">
+<div class="field">
+<label>CHECK IN</label>
+<input type="date" id="checkin" required>
+</div>
+<div class="field">
+<label>CHECK OUT</label>
+<input type="date" id="checkout" required>
+</div>
+<div class="field">
+<label>GUESTS</label>
+<select id="guests"><option>1 Guest</option><option selected>2 Guests</option><option>3 Guests</option><option>4 Guests</option></select>
+</div>
+<div class="field">
+<label>ROOM TYPE</label>
+<select id="roomtype"><option>Deluxe Room</option><option>Executive Suite</option><option>Presidential Suite</option></select>
+</div>
+<button class="gold-btn">CHECK AVAILABILITY</button>
+</form>
+</div>
+
+<section class="center" id="rooms">
+<div class="eyebrow">ACCOMMODATION</div>
+<h2 class="heading">Rooms designed around you.</h2>
+<p class="sub">Every detail is thoughtfully considered. Discover refined interiors, exceptional comfort and a peaceful atmosphere.</p>
 <div class="grid">
 <div class="card">
-<div class="symbol">⌂</div>
-<h3>Hotel Websites</h3>
-<p>Beautiful, mobile-friendly websites that showcase rooms, facilities, services and your hotel's unique experience.</p>
+<img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800" alt="Luxury deluxe hotel room">
+<div class="card-body">
+<div class="eyebrow">CLASSIC COMFORT</div>
+<h3>Deluxe Room</h3>
+<p>Elegant accommodation with contemporary furnishings and a relaxing atmosphere.</p>
+<div class="price"><strong class="naira" data-ngn="85000" data-usd="55">₦85,000</strong> / night</div>
+<a href="#contact" class="link">ENQUIRE ABOUT THIS ROOM →</a>
+</div>
 </div>
 <div class="card">
-<div class="symbol">▣</div>
-<h3>Booking Solutions</h3>
-<p>Convenient room enquiry and reservation experiences that make it easier for guests to plan their stay.</p>
+<img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800" alt="Executive hotel suite">
+<div class="card-body">
+<div class="eyebrow">REFINED LIVING</div>
+<h3>Executive Suite</h3>
+<p>Spacious suite with a separate lounge and premium guest amenities.</p>
+<div class="price"><strong class="naira" data-ngn="160000" data-usd="105">₦160,000</strong> / night</div>
+<a href="#contact" class="link">ENQUIRE ABOUT THIS ROOM →</a>
+</div>
 </div>
 <div class="card">
-<div class="symbol">✉</div>
-<h3>Guest Automation</h3>
-<p>Streamlined enquiries, WhatsApp communication and customer follow-up workflows.</p>
+<img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800" alt="Presidential luxury suite">
+<div class="card-body">
+<div class="eyebrow">ULTIMATE INDULGENCE</div>
+<h3>Presidential Suite</h3>
+<p>An exceptional private retreat with expansive interiors and luxurious details.</p>
+<div class="price"><strong class="naira" data-ngn="350000" data-usd="230">₦350,000</strong> / night</div>
+<a href="#contact" class="link">ENQUIRE ABOUT THIS ROOM →</a>
+</div>
+</div>
+</div>
+<p style="margin-top:25px;font:12px Arial;color:#888">Demonstration prices only. Availability and actual rates are not connected to a live hotel.</p>
+</section>
+
+<section class="about" id="experience">
+<div>
+<div class="eyebrow">THE GRAND HAVEN EXPERIENCE</div>
+<h2 class="heading">Rooted in Africa. Inspired by the world.</h2>
+<p>At The Grand Haven, we celebrate the richness of African hospitality while embracing the standards of international luxury.</p>
+<p>From thoughtful service and beautiful spaces to memorable culinary experiences, every moment is designed to make you feel at home.</p>
+<a href="#contact" class="gold-btn">PLAN YOUR STAY</a>
+</div>
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1000" alt="Luxury hotel swimming pool">
+</section>
+
+<section class="center dining" id="dining">
+<div class="eyebrow">CULINARY JOURNEYS</div>
+<h2 class="heading">A taste of Africa and beyond.</h2>
+<p class="sub">Discover a dining experience that brings together the flavours of Nigeria and international cuisine.</p>
+<div class="grid">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800" alt="Elegant restaurant">
+<div class="card-body"><h3>The Haven Restaurant</h3><p>Elegant dining with Nigerian favourites and international classics.</p></div>
 </div>
 <div class="card">
-<div class="symbol">↗</div>
-<h3>Website Management</h3>
-<p>Ongoing updates, improvements and technical support to keep your website running smoothly.</p>
+<img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800" alt="Luxury dining">
+<div class="card-body"><h3>The Signature Lounge</h3><p>A welcoming setting for relaxing evenings and social moments.</p></div>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800" alt="Fine dining">
+<div class="card-body"><h3>Private Dining</h3><p>Personalised dining experiences for special celebrations.</p></div>
 </div>
 </div>
 </section>
 
-<section id="work">
-<div class="section-tag">PORTFOLIO CONCEPT</div>
-<h2>Experience what your hotel could look like online.</h2>
-<p class="intro">A demonstration of the kind of digital experience we can create for hospitality brands.</p>
-<div class="grid">
-<div class="demo">
-<div class="demo-image">✦</div>
-<div class="demo-content">
-<div class="section-tag">HOTEL DEMO</div>
-<h3>The Grand Haven Hotel</h3>
-<p>A premium hotel website concept featuring room presentations, guest enquiries and elegant hospitality branding.</p>
-<a href="#contact" class="btn secondary">Request a similar website →</a>
-<p class="note">Concept project — not a real client.</p>
-</div>
-</div>
-<div class="demo">
-<div class="demo-image" style="background:linear-gradient(130deg,#9c7651,#4c594d,#182638)">✧</div>
-<div class="demo-content">
-<div class="section-tag">RESORT DEMO</div>
-<h3>Azure Palm Resort</h3>
-<p>A resort website concept showcasing accommodation, amenities and memorable guest experiences.</p>
-<a href="#contact" class="btn secondary">Request a similar website →</a>
-<p class="note">Concept project — not a real client.</p>
-</div>
-</div>
+<section class="center">
+<div class="eyebrow">BEYOND YOUR ROOM</div>
+<h2 class="heading">Make every moment memorable.</h2>
+<div class="features">
+<div class="feature"><b>◇</b><span>Infinity Pool</span></div>
+<div class="feature"><b>✧</b><span>Spa & Wellness</span></div>
+<div class="feature"><b>⌁</b><span>Fitness Centre</span></div>
+<div class="feature"><b>♧</b><span>Garden Retreat</span></div>
 </div>
 </section>
 
-<section>
-<div class="section-tag">OUR PROCESS</div>
-<h2>From idea to online presence.</h2>
-<div class="grid">
-<div class="step">
-<h3>01. Discovery</h3>
-<p>We understand your hotel, goals, guests and requirements.</p>
-</div>
-<div class="step">
-<h3>02. Design</h3>
-<p>We create a professional digital experience for your brand.</p>
-</div>
-<div class="step">
-<h3>03. Development</h3>
-<p>We build and test your responsive website.</p>
-</div>
-<div class="step">
-<h3>04. Launch</h3>
-<p>We publish your website and provide ongoing support.</p>
-</div>
+<section class="center dining">
+<div class="eyebrow">A GLIMPSE OF LUXURY</div>
+<h2 class="heading">Spaces made for unforgettable moments.</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=900" alt="Resort pool">
+<img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800" alt="Hotel exterior">
+<img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800" alt="Luxury interior">
+<img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800" alt="Luxury hotel">
+<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800" alt="Hotel bedroom">
 </div>
 </section>
 
-<section id="contact">
-<div class="cta">
-<div class="section-tag">LET'S WORK TOGETHER</div>
-<h2>Ready to grow your hotel's digital presence?</h2>
-<p>Let's create a website that gives your guests a better first impression and makes enquiries easier.</p>
-<a class="btn primary" href=https://wa.me/2349125986073?text=Hello%20StayPilot%20Digital%2C%20I%20am%20interested%20in%20your%20services..">Chat with us on WhatsApp →</a>
+<section class="reservation center" id="contact">
+<div class="eyebrow">YOUR JOURNEY STARTS HERE</div>
+<h2 class="heading">Let us make your stay special.</h2>
+<p class="sub">Send a reservation enquiry. Our guest services team will be happy to assist you.</p>
+<div class="reservation-box">
+<form id="bookingForm">
+<label>YOUR FULL NAME</label>
+<input id="name" placeholder="Enter your name" required>
+<label>EMAIL ADDRESS</label>
+<input id="email" type="email" placeholder="Enter your email" required>
+<label>PHONE NUMBER</label>
+<input id="phone" type="tel" placeholder="Your phone number" required>
+<label>ROOM TYPE</label>
+<select id="selectedRoom"><option>Deluxe Room</option><option>Executive Suite</option><option>Presidential Suite</option></select>
+<label>CHECK-IN DATE</label>
+<input id="arrival" type="date" required>
+<label>CHECK-OUT DATE</label>
+<input id="departure" type="date" required>
+<label>ADDITIONAL REQUESTS</label>
+<textarea id="requests" rows="3" placeholder="Tell us anything else we should know"></textarea>
+<button class="gold-btn" type="submit">SEND RESERVATION ENQUIRY →</button>
+</form>
 </div>
+<p style="font:11px Arial;color:#cbd1ca;margin-top:20px">Demonstration booking system. No actual room reservations are confirmed.</p>
 </section>
 </main>
 
 <footer>
-<div><strong>STAYPILOT DIGITAL</strong><br>Digital solutions for hospitality.</div>
-<div>© 2026 StayPilot Digital. All rights reserved.</div>
+<div><strong>THE GRAND HAVEN</strong><p>Hotel & Resort<br>Where African hospitality meets international luxury.</p></div>
+<div><strong>EXPLORE</strong><p><a href="#rooms">Rooms & Suites</a><br><a href="#dining">Dining</a><br><a href="#experience">Experience</a></p></div>
+<div><strong>CONTACT</strong><p>Demonstration property<br>Contact details to be configured</p></div>
 </footer>
+<div class="disclaimer">FICTIONAL HOTEL WEBSITE DEMONSTRATION · CREATED BY STAYPILOT DIGITAL</div>
 
+<script>
+const wa="2349125986073";
+const checkin=document.getElementById("checkin");
+const checkout=document.getElementById("checkout");
+const arrival=document.getElementById("arrival");
+const departure=document.getElementById("departure");
+const today=new Date().toISOString().split("T")[0];
+[checkin,checkout,arrival,departure].forEach(el=>el.min=today);
+checkin.addEventListener("change",()=>checkout.min=checkin.value);
+arrival.addEventListener("change",()=>departure.min=arrival.value);
+
+document.getElementById("bookingForm").addEventListener("submit",function(e){
+e.preventDefault();
+if(departure.value<=arrival.value){
+alert("Check-out must be after check-in.");
+return;
+}
+const message=`Hello, I am interested in a reservation at The Grand Haven Hotel.
+
+Name: ${document.getElementById("name").value}
+Email: ${document.getElementById("email").value}
+Phone: ${document.getElementById("phone").value}
+Room: ${document.getElementById("selectedRoom").value}
+Check-in: ${arrival.value}
+Check-out: ${departure.value}
+Requests: ${document.getElementById("requests").value}
+
+Please provide more information.`;
+window.open("https://wa.me/"+wa+"?text="+encodeURIComponent(message),"_blank");
+});
+
+document.querySelector(".booking form").addEventListener("submit",function(){
+document.getElementById("selectedRoom").value=document.getElementById("roomtype").value;
+arrival.value=checkin.value;
+departure.value=checkout.value;
+});
+</script>
 </body>
-  </html>
-  
+</html>
